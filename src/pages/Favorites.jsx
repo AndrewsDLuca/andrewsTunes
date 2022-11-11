@@ -1,9 +1,9 @@
-import React, { Componet } from 'react';
+import React, { Component } from 'react';
 
-class Favorites extends Componet {
+class Favorites extends Component {
   render() {
     return (
-      <div data-testid="page-album">
+      <div data-testid="page-favorites">
         a
       </div>
     );

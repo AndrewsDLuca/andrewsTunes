@@ -1,6 +1,6 @@
-import React, { Componet } from 'react';
+import React, { Component } from 'react';
 
-class Search extends Componet {
+class Search extends Component {
   render() {
     return (
       <div data-testid="page-search">

@@ -1,9 +1,9 @@
-import React, { Componet } from 'react';
+import React, { Component } from 'react';
 
-class Profile extends Componet {
+class Profile extends Component {
   render() {
     return (
-      <div data-testid="page-favorites">
+      <div data-testid="page-profile">
         a
       </div>
     );

@@ -1,6 +1,6 @@
-import React, { Componet } from 'react';
+import React, { Component } from 'react';
 
-class ProfileEdit extends Componet {
+class ProfileEdit extends Component {
   render() {
     return (
       <div data-testid="page-profile-edit">
