@@ -5,25 +5,25 @@ import { getUser } from '../../services/userAPI';
 
 export default class Header extends Component {
   state = {
-    userApi: '',
+    userApiii: '',
     loading: true,
   };
 
   async componentDidMount() {
     const getUserApi = await getUser();
     this.setState({
-      userApi: getUserApi.name,
+      userApiii: getUserApi.name,
       loading: false,
     });
   }
 
   render() {
-    const { userApi, loading } = this.state;
+    const { userApiii, loading } = this.state;
     return (
       <div>
         <header data-testid="header-component">
           {
-            loading ? <Loading /> : <h2 data-testid="header-user-name">{ userApi }</h2>
+            loading ? <Loading /> : <h2 data-testid="header-user-name">{ userApiii }</h2>
           }
         </header>
         <ul>
