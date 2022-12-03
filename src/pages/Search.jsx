@@ -13,13 +13,15 @@ class Search extends Component {
     searching: '',
   };
 
-  loginCheck = (event) => {
-    const { value } = event.target;
-    const minLength = 2;
-    const verify = value.length < minLength;
-
+  loginCheck = ({ target }) => {
+    const { name, value } = target;
     this.setState({
-      buttonLogin: verify,
+      [name]: value,
+    }, () => {
+      const { searchArtist } = this.state;
+      if (searchArtist.length >= 2) {
+        this.setState({ buttonLogin: false });
+      }
     });
   };
 
@@ -45,6 +47,7 @@ class Search extends Component {
           data-testid="search-artist-input"
           onChange={ this.loginCheck }
           value={ searchArtist }
+          name="searchArtist"
         />
         <button
           data-testid="search-artist-button"
