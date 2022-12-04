@@ -59,7 +59,7 @@ class Search extends Component {
         </button>
         { albums.length > 0
           ? <h3>{`Resultado de álbuns de: ${searching}` }</h3>
-          : <h3>Nenhum álbuns foi encontrado</h3>}
+          : <h3>Nenhum álbum foi encontrado</h3>}
         {
           albums.length > 0 && albums.map((element) => {
             const { collectionId } = element;
