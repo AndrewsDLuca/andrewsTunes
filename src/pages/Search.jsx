@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import searchAlbumApi from '../services/searchAlbumsAPI';
 import Loading from './components/Loading';
-import Album from './Album';
+import AlbumList from './components/AlbumList';
 
 class Search extends Component {
   state = {
@@ -64,7 +64,7 @@ class Search extends Component {
           albums.length > 0 && albums.map((element) => {
             const { collectionId } = element;
             return (
-              <Album key={ collectionId } { ...element } />
+              <AlbumList key={ collectionId } { ...element } />
             );
           })
         }
