@@ -26,7 +26,7 @@ class Search extends Component {
   };
 
   buttonSearch = async () => {
-    this.state({ loading: true });
+    this.setState({ loading: true });
     const { searchArtist } = this.state;
     const getAlbum = await searchAlbumApi(searchArtist);
     this.setState({
