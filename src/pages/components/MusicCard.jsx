@@ -22,18 +22,22 @@ export default class MusicCard extends Component {
 
   favoritsSong = async () => {
     const { music } = this.props;
-    this.setState({ loading: true });
-    await addSong(music);
-    this.setState({
-      loading: false,
-      check: true,
-    });
-    this.setState({ loading: true });
-    await removeSong(music);
-    this.setState({
-      loading: false,
-      check: false,
-    });
+    const { check } = this.state;
+    if (check) {
+      this.setState({ loading: true });
+      await removeSong(music);
+      this.setState({
+        loading: false,
+        check: false,
+      });
+    } else {
+      this.setState({ loading: true });
+      await addSong(music);
+      this.setState({
+        loading: false,
+        check: true,
+      });
+    }
   };
 
   render() {
