@@ -62,7 +62,7 @@ export default class ProfileEdit extends Component {
         <Header />
         {loading ? <Loading />
           : (
-            <forms>
+            <form>
               <input
                 type="text"
                 data-testid="edit-input-name"
@@ -97,9 +97,9 @@ export default class ProfileEdit extends Component {
                 disabled={ isButtonSubmitDisabled }
                 onClick={ this.buttonSubmit }
               >
-                Editar Perfil
+                Editar perfil
               </button>
-            </forms>
+            </form>
           )}
       </div>
     );
